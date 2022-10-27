@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" minWidth="-Infinity" text="BATTLESHIP" textAlignment="CENTER">
+                           <font>
+                              <Font name="Corbel Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" text="PELAAJAT" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" text="Pelaaja 1:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="pelaaja1Nimi" alignment="TOP_LEFT" promptText="Anna nimi" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" text="Pelaaja 2:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="pelaaja2Nimi" alignment="TOP_LEFT" promptText="Anna nimi" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" text="LAIVOJEN MÄÄRÄ (valitse laivojen määrä)" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Lentotukialukset:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <CheckBox fx:id="lentotukialus1chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <TextField fx:id="lentotukialusMäärä" editable="false" maxHeight="20.0" maxWidth="22.0" minHeight="20.0" minWidth="22.0" prefHeight="20.0" prefWidth="22.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Taistelulaivat:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <CheckBox fx:id="taistelulaiva1chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="taistelulaiva2chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <TextField fx:id="taistelulaivaMäärä" editable="false" maxHeight="20.0" maxWidth="22.0" minHeight="20.0" minWidth="22.0" prefHeight="20.0" prefWidth="22.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Risteilijät:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <CheckBox fx:id="risteilijä1chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="risteilijä2chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="risteilijä3chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <TextField fx:id="risteilijäMäärä" editable="false" maxHeight="20.0" maxWidth="22.0" minHeight="20.0" minWidth="22.0" prefHeight="20.0" prefWidth="22.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Sukellusveneet:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <CheckBox fx:id="sukellusvene1chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="sukellusvene2chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="sukellusvene3chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="sukellusvene4chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <TextField fx:id="sukellusveneMäärä" editable="false" maxHeight="20.0" maxWidth="22.0" minHeight="20.0" minWidth="22.0" prefHeight="20.0" prefWidth="22.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Hävittäjät:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <CheckBox fx:id="hävittäjä1chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="hävittäjä2chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="hävittäjä3chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="hävittäjä4chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <CheckBox fx:id="hävittäjä5chk" mnemonicParsing="false">
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </CheckBox>
+                        <TextField fx:id="hävittäjäMäärä" editable="false" maxHeight="20.0" maxWidth="22.0" minHeight="20.0" minWidth="22.0" prefHeight="20.0" prefWidth="22.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" text="PELIALUEEN KOKO (n*n)" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Valitse koko:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="kokoValinta" minWidth="85.0" promptText="n x n" visibleRowCount="6" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" text="ALOITA tai LOPETA PELI" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Aloita peli:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="nappiAloita" minWidth="85.0" mnemonicParsing="false" text="ALOITA" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Lopeta peli:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="nappiLopeta" minWidth="85.0" mnemonicParsing="false" text="LOPETA" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <HBox prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="PELAAJA 1" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <right>
+      <HBox prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="PELAAJA 2" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </right>
+   <bottom>
+      <VBox prefHeight="24.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0" />
+            <Label fx:id="ohjetekstiAlakulma" text="Ohjeita tänne..." />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>

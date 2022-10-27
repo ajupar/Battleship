@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="left_settings" prefWidth="300.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox>
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <Label alignment="CENTER" text="PLAYER:" textAlignment="CENTER">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="playerName" alignment="TOP_CENTER" layoutX="174.0" layoutY="15.0" text="Print layer name here.">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" text="FLEET (drag&amp;drop vessels to playground)" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="90.0" text="Carriers:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="boat5amount" alignment="CENTER" editable="false" maxHeight="20.0" maxWidth="25.0" minHeight="20.0" minWidth="25.0" prefHeight="20.0" prefWidth="25.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="boat5Button" maxHeight="21.0" maxWidth="105.0" minHeight="21.0" minWidth="105.0" mnemonicParsing="false" onDragDetected="#boat5ButtonOnDragDetected" onDragDone="#boat5ButtonOnDragDone" prefHeight="21.0" prefWidth="105.0" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="90.0" text="Battleships:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="boat4amount" alignment="CENTER" editable="false" maxHeight="20.0" maxWidth="25.0" minHeight="20.0" minWidth="25.0" prefHeight="20.0" prefWidth="25.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="boat4Button" maxHeight="21.0" maxWidth="84.0" minHeight="21.0" minWidth="84.0" mnemonicParsing="false" onDragDetected="#boat4ButtonOnDragDetected" onDragDone="#boat4ButtonOnDragDone" prefHeight="21.0" prefWidth="84.0" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="90.0" text="Cruisers:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="boat3amount" alignment="CENTER" editable="false" maxHeight="20.0" maxWidth="25.0" minHeight="20.0" minWidth="25.0" prefHeight="20.0" prefWidth="25.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="boat3Button" maxHeight="21.0" maxWidth="63.0" minHeight="21.0" minWidth="63.0" mnemonicParsing="false" onDragDetected="#boat3ButtonOnDragDetected" onDragDone="#boat3ButtonOnDragDone" prefHeight="21.0" prefWidth="63.0" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="90.0" text="Submarines:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="boat2amount" alignment="CENTER" editable="false" maxHeight="20.0" maxWidth="25.0" minHeight="20.0" minWidth="25.0" prefHeight="20.0" prefWidth="25.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="boat2Button" maxHeight="21.0" maxWidth="63.0" minHeight="21.0" minWidth="63.0" mnemonicParsing="false" onDragDetected="#boat2ButtonOnDragDetected" onDragDone="#boat2ButtonOnDragDone" prefHeight="21.0" prefWidth="63.0" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="90.0" text="Destroyers:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="15.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="boat1amount" alignment="CENTER" editable="false" maxHeight="20.0" maxWidth="25.0" minHeight="20.0" minWidth="25.0" prefHeight="20.0" prefWidth="25.0" promptText="0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="boat1Button" maxHeight="21.0" maxWidth="42.0" minHeight="21.0" minWidth="42.0" mnemonicParsing="false" onDragDetected="#boat1ButtonOnDragDetected" onDragDone="#boat1ButtonOnDragDone" prefHeight="21.0" prefWidth="42.0" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+      <VBox spacing="10.0">
+         <children>
+            <Label alignment="CENTER" text="FLEET SET-UP:" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="33.0" prefWidth="290.0">
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="150.0" text="Relocate all  vessels:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="4.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="relocateButton" minWidth="85.0" mnemonicParsing="false" onAction="#relocateButtonAction" text="RELOCATE" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" spacing="5.0">
+                     <children>
+                        <Label minWidth="150.0" text="Approve set-up:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="setupApproved" minWidth="85.0" mnemonicParsing="false" onAction="#setupApprovedButtonAction" text="OK" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

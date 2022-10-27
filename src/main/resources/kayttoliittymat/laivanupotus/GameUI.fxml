@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="kayttoliittymat.laivanupotus.ui.GameUIController">
+   <left>
+      <VBox fx:id="left_settings" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" text="PLAYERS" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" text="Player 1:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="player1name" alignment="TOP_LEFT" promptText="Write your name..." />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" text="Player 2:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="player2name" alignment="TOP_LEFT" promptText="Write your name..." />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" text="FLEET (select vessels for your fleet)" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label minWidth="110.0" text="Carriers:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <CheckBox fx:id="boat5chk1" mnemonicParsing="false" onAction="#boat5AddRemove1">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <TextField fx:id="boat5pcs" editable="false" maxHeight="20.0" maxWidth="23.0" minHeight="20.0" minWidth="23.0" prefHeight="20.0" prefWidth="23.0" promptText="0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="1.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label minWidth="110.0" text="Battleships:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <CheckBox fx:id="boat4chk1" mnemonicParsing="false" onAction="#boat4AddRemove1">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat4chk2" mnemonicParsing="false" onAction="#boat4AddRemove2">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <TextField fx:id="boat4pcs" editable="false" maxHeight="20.0" maxWidth="23.0" minHeight="20.0" minWidth="23.0" prefHeight="20.0" prefWidth="23.0" promptText="0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="1.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label minWidth="110.0" text="Cruisers:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <CheckBox fx:id="boat3chk1" mnemonicParsing="false" onAction="#boat3AddRemove1">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat3chk2" mnemonicParsing="false" onAction="#boat3AddRemove2">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat3chk3" mnemonicParsing="false" onAction="#boat3AddRemove3">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <TextField fx:id="boat3pcs" editable="false" maxHeight="20.0" maxWidth="23.0" minHeight="20.0" minWidth="23.0" prefHeight="20.0" prefWidth="23.0" promptText="0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="1.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label minWidth="110.0" text="Submarines:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <CheckBox fx:id="boat2chk1" mnemonicParsing="false" onAction="#boat2AddRemove1">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat2chk2" mnemonicParsing="false" onAction="#boat2AddRemove2">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat2chk3" mnemonicParsing="false" onAction="#boat2AddRemove3">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat2chk4" mnemonicParsing="false" onAction="#boat2AddRemove4">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox disable="true" mnemonicParsing="false" visible="false">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <TextField fx:id="boat2pcs" editable="false" maxHeight="20.0" maxWidth="23.0" minHeight="20.0" minWidth="23.0" prefHeight="20.0" prefWidth="23.0" promptText="0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="1.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label minWidth="110.0" text="Destroyers:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <CheckBox fx:id="boat1chk1" mnemonicParsing="false" onAction="#boat1AddRemove1">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat1chk2" mnemonicParsing="false" onAction="#boat1AddRemove2">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat1chk3" mnemonicParsing="false" onAction="#boat1AddRemove3">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat1chk4" mnemonicParsing="false" onAction="#boat1AddRemove4">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <CheckBox fx:id="boat1chk5" mnemonicParsing="false" onAction="#boat1AddRemove5">
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </CheckBox>
+                              <TextField fx:id="boat1pcs" editable="false" maxHeight="20.0" maxWidth="23.0" minHeight="20.0" minWidth="23.0" prefHeight="20.0" prefWidth="23.0" promptText="0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="1.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" text="GAME AREA SIZE (n*n)" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Choose size:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="gameAreaSizeSelection" minWidth="85.0" onAction="#gameAreaBoxOnAction" promptText="n x n" visibleRowCount="6" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" text="START  the GAME:" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label minWidth="110.0" text="Start game:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="15.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="startButton" minWidth="85.0" mnemonicParsing="false" onAction="#startButtonAction" text="START" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <HBox fx:id="right_gamezone" minWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator orientation="VERTICAL" />
+            <VBox minWidth="350.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="GAMEZONE" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox fx:id="bottom_infoArea" BorderPane.alignment="CENTER">
+         <children>
+            <Separator />
+            <HBox>
+               <children>
+                  <Label fx:id="informativeTextLeftBottom" maxWidth="1.7976931348623157E308" text="Game instructions..." HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="exitButton" minWidth="85.0" mnemonicParsing="false" text="EXIT">
+                     <HBox.margin>
+                        <Insets bottom="4.0" right="5.0" top="2.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="490.0" minWidth="750.0" prefHeight="490.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <AnchorPane fx:id="leftAnchor" minHeight="450.0" minWidth="300.0" prefHeight="450.0" prefWidth="300.0" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <AnchorPane fx:id="bottomAnchor" minHeight="40.0" minWidth="750.0" prefHeight="40.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox minHeight="30.0" minWidth="750.0" prefHeight="30.0" prefWidth="750.0">
+                     <children>
+                        <Separator minHeight="-Infinity" minWidth="750.0" prefWidth="750.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="bottom_infoArea" minHeight="40.0" prefHeight="40.0">
+                     <children>
+                        <Separator minWidth="750.0" />
+                        <HBox>
+                           <children>
+                              <Label fx:id="informativeTextLeftBottom" maxWidth="1.7976931348623157E308" text="Game instructions..." HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="4.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Button fx:id="exitButton" minHeight="30.0" minWidth="85.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="30.0" prefWidth="85.0" text="EXIT">
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" right="10.0" top="2.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane fx:id="centerAnchor" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
